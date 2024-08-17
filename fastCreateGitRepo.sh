@@ -26,6 +26,10 @@ gh repo create $1 --public --description "$2"
 # push local changes to remote repository
 green "Pushing local changes to remote repository..."
 git init 
+
+green "Creating MIT..."
+license MIT
+
 git add . 
 git commit -m "Initial commit" 
 git branch -M main 
@@ -34,10 +38,4 @@ git push -u origin main
 
 green "Local changes pushed to remote repository Finished!"
 green "New repository created on GitHub: https://github.com/$gitusername/$1"
-
-green "Creating MIT..."
-license MIT
-
-# my alias print green text...
-green "Done"
 
